@@ -1,28 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
     tools:context=".MainActivity">
 
     <!-- 클릭리스너 인터페이스 이용해보기   -->
-    <Button
-        android:id="@+id/btn"
-        android:layout_width="wrap_content"
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="go to Second"
-        android:layout_centerInParent="true"/>
+        android:orientation="horizontal">
+        <Button
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/btn"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:background="@drawable/bg_botton"
+            android:text="약국 찾기"/>
 
-    <!-- onClick속성 이용하기   -->
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="exit"
-        android:backgroundTint="@color/colorAccent"
-        android:layout_alignParentRight="true"
-        android:layout_margin="16dp"
-        android:onClick="clickExit"/>
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_gravity="center"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:text="병원찾기"
+                android:layout_alignParentRight="true"
+                android:layout_margin="16dp"
+                android:background="@drawable/bg_botton"
+                android:onClick="clickExit"/>
+
+            <Button
+                android:layout_gravity="center"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:background="@drawable/bg_botton"
+                android:text="응급센터"/>
 
 
-</RelativeLayout>
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/relativelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bnv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:menu="@menu/bottom"
+            app:itemTextColor="#777777"
+            app:itemIconTint="#777777"
+            android:background="#ffffff"
+            app:itemIconSize="28dp"
+            android:layout_alignParentBottom="true">
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

@@ -32,6 +32,7 @@ class MainActivity : AppCompatActivity() {
             //이 영역은 익명클래스가 아니어서 this를 MainActivity로 인지함.
             //Toast.makeText(this, b.text, Toast.LENGTH_SHORT).show()
             startActivity( Intent(this, SecondActivity::class.java))
+
         }
 
 
